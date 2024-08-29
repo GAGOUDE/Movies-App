@@ -1,0 +1,57 @@
+.header {
+  background-color: $black;
+  height: 70px;
+  width: 100%;
+  /* Ajoutez ceci pour s'assurer que le header prend toute la largeur */
+  position: fixed;
+  /* Changez de absolute à fixed pour rendre le header fixe */
+  top: 0;
+  /* Positionnez le header en haut de la page */
+  left: 0;
+  /* Alignez le header à gauche */
+  z-index: 1000;
+  /* Assurez-vous que le header reste au-dessus du reste du contenu */
+
+  nav {
+    position: relative;
+    /* Changez à relative car le header est déjà en position fixed */
+    top: 16px;
+    left: 16px;
+    font-size: 1.3rem;
+
+    ul {
+      display: flex;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        border-radius: 8px;
+        width: 102px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin-right: 5px;
+        border: 1px solid white;
+        transition: all 300ms ease-out;
+
+        &:visited {
+          text-decoration: none;
+          color: $white;
+        }
+
+        &:hover {
+          background: $color-1;
+          border: 2px solid $white;
+        }
+      }
+
+      a.nav-active {
+        background: $color-1;
+
+        &:hover {
+          background: $color-3;
+        }
+      }
+    }
+  }
+}
